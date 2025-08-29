@@ -1,0 +1,96 @@
+### SUCCESS BALANCED LEVEL CONFIG
+POST http://localhost:3000/mode-configurations/validation HTTP/1.1
+Content-Type: application/json
+
+{
+  "llmConfig": {
+    "modelId": "gemini-2.0-flash"
+  },
+  "levelConfig": {
+    "level": 25,
+    "difficulty": "easy",
+    "reward": 350,
+    "timeLimit": 60
+  }
+}
+
+### SUCCESS UNBALANCED LEVEL CONFIG
+POST http://localhost:3000/mode-configurations/validation HTTP/1.1
+Content-Type: application/json
+
+{
+  "llmConfig": {
+    "modelId": "gemini-2.0-flash"
+  },
+  "levelConfig": {
+    "level": 999,
+    "difficulty": "easy",
+    "reward": 3400,
+    "timeLimit": 20
+  }
+}
+
+
+### VALIDATION ERROR LlmConfig
+POST http://localhost:3000/mode-configurations/validation HTTP/1.1
+Content-Type: application/json
+
+{
+  "llmConfig": {
+    "modelId": ""
+  },
+  "levelConfig": {
+    "level": 600,
+    "difficulty": "easy",
+    "reward": 350,
+    "timeLimit": 60
+  }
+}
+
+### VALIDATION ERROR LlmConfig level
+POST http://localhost:3000/mode-configurations/validation HTTP/1.1
+Content-Type: application/json
+
+{
+  "llmConfig": {
+    "modelId": "gemini-2.0-flash"
+  },
+  "levelConfig": {
+    "level": -1,
+    "difficulty": "easy",
+    "reward": 350,
+    "timeLimit": 60
+  }
+}
+
+### VALIDATION ERROR LlmConfig reward
+POST http://localhost:3000/mode-configurations/validation HTTP/1.1
+Content-Type: application/json
+
+{
+  "llmConfig": {
+    "modelId": "gemini-2.0-flash"
+  },
+  "levelConfig": {
+    "level": 5,
+    "difficulty": "easy",
+    "reward": 1274987,
+    "timeLimit": 60
+  }
+}
+
+### VALIDATION ERROR LevelConfig difficulty
+POST http://localhost:3000/mode-configurations/validation HTTP/1.1
+Content-Type: application/json
+
+{
+  "llmConfig": {
+    "modelId": "gemini-2.0-flash"
+  },
+  "levelConfig": {
+    "level": 5,
+    "difficulty": "incorrect",
+    "reward": 500,
+    "timeLimit": 60
+  }
+}
