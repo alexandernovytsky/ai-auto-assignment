@@ -57,7 +57,7 @@ possible values for `llmConfig.modelId` are 'gemini-2.0-flash', 'gemini-2.5-flas
 
 ## Examples
 
-There is an `tests.http` file with the requests used to generate the example results.
+There is an [tests.http](./tests.http) file with the requests used to generate the example results.
 It can be used using REST Client extension in VSCode or copy them to Postman/curl.
 
 ### Balanced Level Config Example:
