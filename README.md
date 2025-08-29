@@ -51,6 +51,9 @@ didn't find the "free tier" in OpenAi so usage Gemini instead, it's not the $ bu
     docker build -t ai-validation-ms .
     docker run -e GEMINI_API_KEY=$GEMINI_API_KEY -p 3000:3000 ai-validation-ms
 
+### Notes
+
+possible values for `llmConfig.modelId` are 'gemini-2.0-flash', 'gemini-2.5-flash'
 
 ## Examples
 
